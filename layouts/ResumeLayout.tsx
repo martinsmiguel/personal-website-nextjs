@@ -8,7 +8,7 @@ export interface ResumeLayoutProps {
 }
 
 export default function ResumeLayout({ children }: ResumeLayoutProps) {
-  let description = 'Minha carreira profissional, experiência e habilidades.'
+  const description = 'Minha carreira profissional, experiência e habilidades.'
 
   return (
     <>
