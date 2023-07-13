@@ -8,7 +8,9 @@ const DEFAULT_LAYOUT = 'ResumeLayout'
 
 export const getStaticProps = async () => {
   const author = allAuthors.find((p) => p.slug === 'resume')
-  return { props: { author } }
+  return {
+    props: { author },
+  }
 }
 
 export default function About({ author }: InferGetStaticPropsType<typeof getStaticProps>) {

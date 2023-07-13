@@ -4,7 +4,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import siteMetadata from '@/data/siteMetadata'
 
 export interface ResumeLayoutProps {
-    children: ReactNode
+  children: ReactNode
 }
 
 export default function ResumeLayout({ children }: ResumeLayoutProps) {

@@ -6,7 +6,11 @@ class MyDocument extends Document {
     return (
       <Html lang={siteMetadata.language} className="scroll-smooth">
         <Head>
-          <link rel="icons8-public" sizes="76x76" href="/static/favicons/icons8-owl_purp-96x96.png" />
+          <link
+            rel="icons8-public"
+            sizes="76x76"
+            href="/static/favicons/icons8-owl_purp-96x96.png"
+          />
           <link
             rel="icon"
             type="image/png"
