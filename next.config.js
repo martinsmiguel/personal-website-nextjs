@@ -65,6 +65,10 @@ module.exports = () => {
     eslint: {
       dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
     },
+    images: {
+      unoptimized: true,
+      domains: ['avatars.githubusercontent.com'],
+    },
     async headers() {
       return [
         {
@@ -73,17 +77,27 @@ module.exports = () => {
         },
       ]
     },
-    webpack: (config, options) => {
+    typescript: { tsconfigPath: './tsconfig.json' },
+    webpack: (config, { dev, isServer }) => {
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif|mp4)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: '/_next',
+              name: 'static/media/[name].[hash].[ext]',
+            },
+          },
+        ],
+      })
+
       config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       })
 
       return config
-    },
-    images: {
-      unoptimized: true,
-      domains: ['avatars.githubusercontent.com'],
     },
   })
 }
