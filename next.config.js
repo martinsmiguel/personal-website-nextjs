@@ -82,6 +82,7 @@ module.exports = () => {
       return config
     },
     images: {
+      unoptimized: true,
       domains: ['avatars.githubusercontent.com'],
     },
   })
