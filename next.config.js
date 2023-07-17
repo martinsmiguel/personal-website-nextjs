@@ -61,7 +61,6 @@ module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/personal-website-nextjs' : '',
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
     eslint: {
       dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
@@ -75,6 +74,8 @@ module.exports = () => {
         {
           source: '/(.*)',
           headers: securityHeaders,
+          basePath: process.env.NODE_ENV === 'production' ? '/personal-website-nextjs' : '',
+          assetPrefix: process.env.NODE_ENV === 'production' ? '/personal-website-nextjs' : '',
         },
       ]
     },
