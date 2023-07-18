@@ -13,7 +13,7 @@ export default function Projects() {
             Projetos
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Projetos que construí ou apenas fiz parte.
+            Projetos que construí e outros que fiz parte.
           </p>
         </div>
         <div className="container py-12">
