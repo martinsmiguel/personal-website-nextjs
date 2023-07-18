@@ -10,7 +10,7 @@ const siteMetadata = {
   description: '',
   language: 'pt-br',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://martinsmiguel.github.io/personal-website-nextjs/',
+  siteUrl: 'https://martinsmiguel.com/',
   siteRepo: 'https://github.com/martinsmiguel/personal-website-nextjs',
   siteLogo: '',
   image: 'https://avatars.githubusercontent.com/u/62387806?v=4',
