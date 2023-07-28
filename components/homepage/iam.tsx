@@ -12,9 +12,9 @@ export default function Iam() {
             24 y/o • Engenheiro • Pesquisador • Full-stack Mobile
           </h2>
           <p className="text-lg">
-            Eu amo ciência, tecnologia e projetos DIY. Em 2022, me formei em engenharia de controle
-            e automação. Durante a faculdade, me apaixonei por programação e pesquisa de inovação
-            tecnológica.
+            Sou apaixonado por ciência, tecnologia e projetos DIY. Desde 2022 sou formado em
+            Engenharia de Controle e Automação pela UFMT, onde me fascinei também por programação e
+            pesquisa de inovação tecnológica.
           </p>
           <p className="text-lg">
             Atualmente, trabalho na{' '}
