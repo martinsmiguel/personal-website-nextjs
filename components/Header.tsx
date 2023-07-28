@@ -4,8 +4,12 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Typewriter from 'typewriter-effect'
+import { useRouter } from 'next/router'
 
 const Header = () => {
+  const router = useRouter()
+
   return (
     <header className="flex items-center justify-between py-10">
       <div>
@@ -19,13 +23,17 @@ const Header = () => {
               {/* <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFAklEQVR4nO1Yf0xVVRz/IDBKQcekrSJllrWcZRItnStb/tiatTXXJCUjV4tV/oHZHKXxnqTQSwikFj96Cg6U9yNNBXoY5z6Zq2w1LcMynLkom4pDMN69jz0qTjv3cR/3Xp48Hu9c4A++23d7737P+X4/n+853/M99wKTMimTwk1utOApyQ2X143rogCfKIAOqI89YzY2BhNNvM14USLokgTQkahI0NPbjNfGFKQkYLVEYPG6kaI8o6cwVRTw80iBB9FW5iOQCDdSWAwWizsBkeA7OXsC/pMENFxxxr8iEXRHAF5Wr4CujoMznpMIakSCf+TnBKe4gpeasVgdtOdYNN270ERLZ5XQE2+soje+iAsb+N9NsfT7nKX0k3t2UesDefJ/zZjjWMSPAIFV7fzosy9TMxwBtUzfQ11rM+iVuqSQwNkYNpbNMat8MJ+asQRWbgSoC3EiQaZEcOZi2d10e5RdE1xR9rxmcQ49t+tBKpIoDSA2z7lyI82Lrrvp3Asfz2XA2yQB2bR+sDa4ysXyOWLd45tp3hRbUCCKsq3x7eZlsrLfw43Nm2KjzOdvZXNEGCkiwdNKRjucibQ5cw21zNBuhXC0YFo1rV+9gV4+cFtgpQztEx6CY8MV40iBhyj+RsMIyN10IFDZ3A/kFeg8lKDZ51Vp24KCNsFBrQu2a+qj6+hUmUjF/flqAp2GEfAQ9CmBCmdWyMB2xO6Xi/P3ypQAiMp5+UMI1Cx6O2C/VH2nvHV2xtXItqKkcvXp4zOMgEjQrwRiR6Ee5Mk3V8i2XywLtLYoO23/dLZs+2bTiiHzXGvXqa8Z/YYR0DazGJkEWwlWyI3p6+UGp9it898LADzw2FuaJsjGsjmFMytkH8xXgIAAahiBgWvEiDrt2YKFgeyz2gijS/9rGAGJwBPOdYEV5/4lW8K7ZhB4DCMgCjgfDpjW/IfDzT4VBZwzjIDkhi2sbI5GCWq5AzejJcYEx0uujHWNRhNoTH+hwQx7JovJBfwaOKPNsDfKrT++ytjsC6DvJ1Qpp1c9i80h+ywbg2d215FphoG/fjhe3yPWcyDgENRO24rnycF8P4H2XfCr78xQMKOx/1o0X3/9+JLHCnSqnTZl+Lum9ziorw3Udx7U2zIU4Gjsruf13d1+jQcBr+YmObt4EMRJv95sS4RrL71rt24F7B7uK8A6q7r189KephjZN/cVMMH+lf7y9WdVMncCf+yZFewKfoLHChQPvXUu51K0kkq/zl4ZhID9w4gJ5MK2XO94X9o2LkUrqbQ6NTfIi5BzWcQEslAZa4bjqtrxzrhaKgrarw6RFLVIomSfuv1/mVs3NsNu0Wfn2mczuO3/DmdisNfQAvCSrTh0h/44bc1P5UagdUeavnh7t8KZDJ6iL+bDz7w6LKhQRavWz1dl6Yu3kCt4P4Ha6WbY/1KCsNfB4UCFKlq1FiWVq8Ff2oIjCdwJ+EnYlphg9ynBuhtuGZ5EiKKWBNDuhlvV2e/LhfMJGCkmOLOVgOzrQ6T7/2xBqnrvb8RYiBmOj1hA9hErUgJ7HzIp4EswlmKCI4cFbrf6v/eMRtsrU5Qz34LxEDOcG0qSd0ueUVzuelyxtPj2Uom9qo4L+EEStvtqHs35MRwSbOy+R945/S4O3ouJIrYns1/vsCd6Q4G/akv02pZuysJEFY8b6VIzfpAIekUB/UzZb4ngNLONN75JmRRo5X8w0VKQtMJPpAAAAABJRU5ErkJggg=="></img> */}
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFBUlEQVR4nO1YfUwcRRR/FAi1hRJSTFRsSbUam2otYixptMR+JKaamMYUW6zYaCRq/4DWNGgrd8UWPAGhaOSj10JztOzeSb8Aj3qzZ9P4FU1RQ7XWaCNa05ZKoXI7R6jKmBnYY3fvynF3s8AfvOQldzsz7/1+b+bNe7sA0zIt08JNrp+CJ7AbnF43XJMlGJQlICM6SJ/RMToHppp4XfA8RtCLJSDjURlB/4ALXplQkFiCdRiBxeuGVOUZOQOzZAl+GC/wANpJbfgC4YZU6oP64k5ARvA1i54E/2EJWi874l/CCPoiAM/UK0Fvd3PiMxiBTUbwD3uO4AxX8NgFGWqn/SejyYGlJlI1r5Kcfm0tuf5xXMjA/26PJd8UrCAf3l1KrPcXsf+aOZ/CMn4EEFjVxk88/SIxg92nljn7iXNDNrnclBwUOJ1D59I1ZpUNalMzF4GVGwHihDgZQQ5G8P2F6rvIrihR41xR+tyWUUDOlT5AZBSlAUTXOdZsIUXRTTdd+8sHCynw81iCPNIymhtc5ULNArnpsW2kaIYQEIii9Gh8tW0lU/p7rLlFMwRCbf5avUAGI0VG8KQS0W5HEnHlrCeWRO1RCEVLZjeQlnWbyaXDt/p2ytA64UFwcqxkHC/wIMnfZhgBVk1HHFUvfJftQM+RBM05r0/fGRC0CezEumSXJj96T8xiRGrvK1YT6DGMgAfBDcVR2dxaBmx37CGWnL/VpfpA1C0q9iNgW/aGb/xiwx3s6OyJs7Gx8uQa9e0zaBgBGcGQ4ohehXqQX25dzcZ+tCzRjkWJpGvffDb2Rf5qv3XODRvVbcaQYQS0xSyGkaA7QRO5LWsTK3DKuHXx2z6Ahx99XVME6Vy6pmxuLbNBbfkISEAMIzDSRoyr0p4tWeqLPs2NEKr0v4YRwAg8obQLNDkPLd8eWpuBwGMYAVmCn0MB01n8UKjRJ7IE5wwjgN0ghBTNcBRBI3fgZjgVYwL7C87sjW1GE2jLeq7VDGIO9ckF/HpwRJtBbGOlP77e2OhLQN5JqFdurxbqm0P0aTRG7+ze47MNA3/tWLy+RmziQMAuqY2er1jEnAmZW33PhMx8PzDhjP9UvljffnzCYwd61Ebbs4erJu2BSpP2sYL0V3OiH8Bwxp3P6qu7eJUHAa+mk5xf4QPRUZjB9GZHItTxqjv36nZA9HDfAVpZ1aWfl/a3xzDb3HfABOJn+ubrj/oU7gR+3z8vUAt+mscOVPh3nau4JC1W6ed5awIQEN+LmEAhCKv0hg+m7+SStFilDWmFAV6EHCsjJpALdbFmsF9RG94T10hkSfvVIZKkllEUs6k7/5e4VWMziBZ9dK5+5B/FcLXbkRToNbQEeMkOOHK7/jrtLE7jRqBzd7o+eQd2gCMFeIo+mY899fKYoIIlrVqPrs3VJ28ZV/DDBBrnmEH8U3FCXwfHAhUsadVanlyjBn9xOxxP4E5gmISw3ATioOKsr3XmmMCCJTWWgPS13qKO/o1CcGSCkWICR57ikH59iPT8ny1JU5/9LTARYgb7+9Qh/YgVKYEDD5oU8JUwkWICewF13GUd/t4TjnbVpSp3vgUmQ8zg2FyZshd7wmju+p2xpOK2KkxfVScF/CgJ4V7bIwXfhUKCzj348Jsdb0HzPTBVRHg879VuMckbDPwVIckrrMjPhakqHjdkYRd8ixEMyBIMUaW/MYIOOjbZ+KZlWkAr/wM5EjpIRbpkPwAAAABJRU5ErkJggg=="></img>
             </div>
-            {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {siteMetadata.headerTitle}
-              </div>
-            ) : (
-              siteMetadata.headerTitle
-            )}
+            <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+              {/* <p>~/</p> */}
+              {`~${router.asPath}`}{' '}
+              <Typewriter
+                options={{
+                  strings: [],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
           </div>
         </Link>
       </div>

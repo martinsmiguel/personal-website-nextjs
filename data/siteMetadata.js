@@ -16,11 +16,11 @@ const siteMetadata = {
   image: 'https://avatars.githubusercontent.com/u/62387806?v=4',
   socialBanner: '',
   email: 'miguelrjmartins9@gmail.com',
-  github: 'https://github.com/martinsmiguel/personal-website-nextjs',
+  github: 'https://github.com/martinsmiguel',
   // twitter: 'https://twitter.com/',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/in/miguel-r-j-martins-469a06180/',
+  linkedin: 'www.linkedin.com/in/miguel-rj-martins',
   locale: 'pt-BR',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
