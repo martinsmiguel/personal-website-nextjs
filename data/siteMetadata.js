@@ -3,7 +3,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'Miguel Martins',
-  author: 'Miguel Martins | 🇧🇷 BR',
+  author: 'Miguel Martins',
   fullName: 'Miguel R. J. Martins',
   headerTitle: 'Miguel Martins',
   footerTitle: 'personal-website-nextjs',
