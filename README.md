@@ -4,7 +4,7 @@
 
 Este é o repositório do código utilizado no meu website pessoal, onde meu foco é produzir conteúdo, compartilhar conhecimentos, experiências e projetos que construí ao longo da minha jornada nas áreas de Desenvolvimento de Software, Engenharia de Controle e Automação, Sistemas Embarcados e Internet das Coisas.
 
-#### Website: [miguelmartins.com](http://martinsmiguel.com/)
+#### Website
 
 Sinta-se à vontade para explorar o código fonte. Se tiver alguma dúvida, sugestão ou feedback, não hesite em entrar em contato.
 
